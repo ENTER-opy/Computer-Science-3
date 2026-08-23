@@ -1,0 +1,65 @@
+#def greet_students (name, nChar):
+#    for i in range(nChar):
+#        print(name[i])
+#name = input("Enter a Name: ")
+#nChar = input("Enter any numeric number: ")
+#nChar = int(nChar)
+#greet_students (name, nChar)
+
+#a. If name is “Joseph The Dreamer” and nChar is 5, what will be the output of the code above and why?
+    #-J
+    #o
+    #s
+    #e
+    #p
+    #-This is because it essentially turns the string into a set, and as such, prints each character from the 0th to nth term (n being nChar)
+#b. Using the same name and nChar is 20, what now is the output and why?
+    #-An error appears inb the terminal:
+        #Traceback (most recent call last):
+        #File "C:\Users\Administrator\PycharmProjects\PythonProject1\CodeTracing.py", line 7, in <module>
+            #greet_students (name, nChar)
+            #~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+        #File "C:\Users\Administrator\PycharmProjects\PythonProject1\CodeTracing.py", line 3, in greet_students
+            #print(name[i])
+                  #~~~~^^^
+        #IndexError: string index out of range
+    #-This is because the string is only 19(-1 for index) characters long. An index of 20 would be too large for the string at hand
+
+#c. If there is an error message encountered in letter b, how will you be able to modify the code so that the error message will not appear.
+#def greet_students (name, nChar):
+#    if nChar < 19:
+#        for i in range(nChar):
+#            print(name[i])
+#        return
+#    else:
+#        exit()
+#name = input("Enter a Name: ")
+#nChar = input("Enter any numeric number: ")
+#nChar = int(nChar)
+#greet_students (name, nChar)
+
+
+
+#def greet_students (name, nChar):
+#    for i in range(nChar, 0, -1):
+#        print(name[0 : i])
+#name = input("Enter a Name:")
+#greet_students (name, len(name))
+
+#a. Find the syntax error and modify it.  Please identify the error and what did you do to fix it?
+    #Error 1: line 45 = the variable used as an index was nChar instead of i, and as such caused a syntax error
+#b. The code should be able to display a given name as an inverted triangle, please fix the code in order for it to do that.  See sample output below if entered name is Joseph
+
+
+def sum_of_squared(n):
+    polis = []
+    for i in range(1,n+1,1):
+        po = i**2
+        polis.append(po)
+    return sum(polis)
+
+n = 0
+while n < 1 or n > 100:
+    n = input("Enter a Number from 1 to 100: ")
+    n = int(n)
+print(f"Sum of all squared numbers is {sum_of_squared(n)}")
